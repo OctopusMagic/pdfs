@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket</title>
+    <style>
+        @page {
+            size: 56mm 297mm;
+            margin: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            width: 54mm;
+            margin: 0;
+            padding: 1mm;
+        }
+        .center {
+            text-align: center;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .details-table {
+            width: 54mm;
+            border-collapse: collapse;
+            margin-top: 10mm;
+        }
+        .details-table th, .details-table td {
+            text-align: left;
+        }
+        .details-table th {
+            border-bottom: 2pt solid #000;
+        }
+        .totals {
+            text-align: right;
+            margin-top: 10mm;
+        }
+        .qr-code {
+            width: 141pt;
+            height: auto;
+            margin: 10mm auto;
+        }
+        .fs24 {
+            font-size: 9pt;
+        }
+        .fs22 {
+            font-size: 8pt;
+        }
+        .fs20 {
+            font-size: 6pt;
+        }
+    </style>
+</head>
+<body>
+
+<div class="center bold fs24">
+    [[nombre_empresa]]
+</div>
+<div class="center fs20">
+    [[direccion]]
+</div>
+<div class="center bold fs20">
+    Código de Generación
+</div>
+<div class="center fs20">
+    [[codigoGeneracion]]
+</div>
+
+<div class="fs20">
+    <div class="bold">Fecha:</div> [[fecEmi]]<br>
+    <div class="bold">Interno:</div> [[numeroControl]]<br>
+    <div class="bold">Cliente:</div> [[receptorNombre]]<br>
+    <div>[[receptorNumDocumento]]<br>
+    <div class="bold">Correo:</div> [[receptorCorreo]]<br>
+    <div class="bold">Teléfono:</div> [[receptorTelefono]]
+</div>
+
+<table class="details-table">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        [[detalleProductos]]
+    </tbody>
+</table>
+
+<div class="totals bold">
+    Monto de Compra: [[TotalPagar]]
+</div>
+
+<div class="center">
+    <img class="qr-code" src="[[codigoQR]]" alt="Código QR">
+</div>
+
+<div class="center fs22">
+    Descargue su factura desde el código QR,<br>
+    además hemos enviado un correo<br>
+    electrónico con los datos del documento<br>
+    electrónico
+</div>
+
+</body>
+</html>
