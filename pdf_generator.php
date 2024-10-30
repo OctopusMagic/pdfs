@@ -2640,13 +2640,13 @@ function generate_factura($documentoArray, $selloRecibido)
 
     if ($documentoArray["receptor"]["direccion"] != null){
         $cod_distrito = buscarDepartamentoYMunicipio($distritos, $documentoArray["receptor"]["direccion"]["departamento"], $documentoArray["receptor"]["direccion"]["municipio"]);
-        $direccion = $cod_distrito. $documentoArray["receptor"]["direccion"]["complemento"];
+        $direccion = $cod_distrito. " ". $documentoArray["receptor"]["direccion"]["complemento"];
     }
     else{
         $direccion = "";
     }
     $cod_distrito = buscarDepartamentoYMunicipio($distritos, $documentoArray["emisor"]["direccion"]["departamento"], $documentoArray["emisor"]["direccion"]["municipio"]);
-    $direccion_emisor = $cod_distrito. $documentoArray["emisor"]["direccion"]["complemento"];
+    $direccion_emisor = $cod_distrito. " ". $documentoArray["emisor"]["direccion"]["complemento"];
 
     $items = "";
 
@@ -2820,13 +2820,13 @@ function generate_ccf($documentoArray, $selloRecibido)
 
     if ($documentoArray["receptor"]["direccion"] != null){
         $cod_distrito = buscarDepartamentoYMunicipio($distritos, $documentoArray["receptor"]["direccion"]["departamento"], $documentoArray["receptor"]["direccion"]["municipio"]);
-        $direccion = $cod_distrito. $documentoArray["receptor"]["direccion"]["complemento"];
+        $direccion = $cod_distrito. " ". $documentoArray["receptor"]["direccion"]["complemento"];
     }
     else{
         $direccion = "";
     }
     $cod_distrito = buscarDepartamentoYMunicipio($distritos, $documentoArray["emisor"]["direccion"]["departamento"], $documentoArray["emisor"]["direccion"]["municipio"]);
-    $direccion_emisor = $cod_distrito. $documentoArray["emisor"]["direccion"]["complemento"];
+    $direccion_emisor = $cod_distrito. " ". $documentoArray["emisor"]["direccion"]["complemento"];
 
     $items = "";
 
@@ -2993,13 +2993,13 @@ function generate_fse($documentoArray, $selloRecibido)
 
     if ($documentoArray["sujetoExcluido"]["direccion"] != null){
         $cod_distrito = buscarDepartamentoYMunicipio($distritos, $documentoArray["sujetoExcluido"]["direccion"]["departamento"], $documentoArray["sujetoExcluido"]["direccion"]["municipio"]);
-        $direccion = $cod_distrito. $documentoArray["sujetoExcluido"]["direccion"]["complemento"];
+        $direccion = $cod_distrito. " ". $documentoArray["sujetoExcluido"]["direccion"]["complemento"];
     }
     else{
         $direccion = "";
     }
     $cod_distrito = buscarDepartamentoYMunicipio($distritos, $documentoArray["emisor"]["direccion"]["departamento"], $documentoArray["emisor"]["direccion"]["municipio"]);
-    $direccion_emisor = $cod_distrito. $documentoArray["emisor"]["direccion"]["complemento"];
+    $direccion_emisor = $cod_distrito. " ". $documentoArray["emisor"]["direccion"]["complemento"];
 
     $items = "";
 
@@ -3113,13 +3113,13 @@ function generate_cre($documentoArray, $selloRecibido)
 
     if ($documentoArray["receptor"]["direccion"] != null){
         $cod_distrito = buscarDepartamentoYMunicipio($distritos, $documentoArray["receptor"]["direccion"]["departamento"], $documentoArray["receptor"]["direccion"]["municipio"]);
-        $direccion = $cod_distrito. $documentoArray["receptor"]["direccion"]["complemento"];
+        $direccion = $cod_distrito. " ". $documentoArray["receptor"]["direccion"]["complemento"];
     }
     else{
         $direccion = "";
     }
     $cod_distrito = buscarDepartamentoYMunicipio($distritos, $documentoArray["emisor"]["direccion"]["departamento"], $documentoArray["emisor"]["direccion"]["municipio"]);
-    $direccion_emisor = $cod_distrito. $documentoArray["emisor"]["direccion"]["complemento"];
+    $direccion_emisor = $cod_distrito. " ". $documentoArray["emisor"]["direccion"]["complemento"];
 
     $items = "";
 
@@ -3234,13 +3234,13 @@ function generate_nc($documentoArray, $selloRecibido)
 
     if ($documentoArray["receptor"]["direccion"] != null){
         $cod_distrito = buscarDepartamentoYMunicipio($distritos, $documentoArray["receptor"]["direccion"]["departamento"], $documentoArray["receptor"]["direccion"]["municipio"]);
-        $direccion = $cod_distrito. $documentoArray["receptor"]["direccion"]["complemento"];
+        $direccion = $cod_distrito. " ". $documentoArray["receptor"]["direccion"]["complemento"];
     }
     else{
         $direccion = "";
     }
     $cod_distrito = buscarDepartamentoYMunicipio($distritos, $documentoArray["emisor"]["direccion"]["departamento"], $documentoArray["emisor"]["direccion"]["municipio"]);
-    $direccion_emisor = $cod_distrito. $documentoArray["emisor"]["direccion"]["complemento"];
+    $direccion_emisor = $cod_distrito. " ". $documentoArray["emisor"]["direccion"]["complemento"];
 
     $items = "";
 
@@ -3395,7 +3395,7 @@ function generate_fex($documentoArray, $selloRecibido)
     ];
 
     $cod_distrito = buscarDepartamentoYMunicipio($distritos, $documentoArray["emisor"]["direccion"]["departamento"], $documentoArray["emisor"]["direccion"]["municipio"]);
-    $direccion_emisor = $cod_distrito. $documentoArray["emisor"]["direccion"]["complemento"];
+    $direccion_emisor = $cod_distrito. " ". $documentoArray["emisor"]["direccion"]["complemento"];
 
     $items = "";
 
