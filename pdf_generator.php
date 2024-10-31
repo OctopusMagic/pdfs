@@ -2515,6 +2515,8 @@ $distritos = [
 
 
 function buscarDepartamentoYMunicipio($array, $codigoDepartamento, $codigoMunicipio) {
+    $codigoDepartamento = trim($codigoDepartamento);
+    $codigoMunicipio = trim($codigoMunicipio);
     $direccion = "";
     // Buscar el departamento por código
     foreach ($array as $departamento) {
